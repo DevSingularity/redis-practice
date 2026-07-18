@@ -1,0 +1,85 @@
+{
+  "id": "71852d99-b37d-4971-ae9c-48a520e6e43d",
+  "name": "Redis",
+  "requests": [
+    {
+      "id": "028846f1-82c6-4d86-8532-f9364cbb3ecf",
+      "name": "New Request",
+      "method": "GET",
+      "url": "http://localhost:5000/banner/exists",
+      "params": [
+        {
+          "id": "ba60c9fd-8a38-44ee-9c1c-4722d53073d6",
+          "key": "message",
+          "value": "This is a Banner Message",
+          "enabled": false
+        }
+      ],
+      "headers": [
+        {
+          "id": "2070bf81-7a5a-43d2-b313-4fcd8b98c076",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"message\": \"This is Saman Pandey, The boss\"\n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "71852d99-b37d-4971-ae9c-48a520e6e43d"
+    },
+    {
+      "id": "5e8e7f55-799a-4d92-bb73-3b85355ed2cb",
+      "name": "New Request",
+      "method": "GET",
+      "url": "http://localhost:5000/banner",
+      "params": [],
+      "headers": [
+        {
+          "id": "d6305efb-18fc-485d-9c7b-787c5cdf5508",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "71852d99-b37d-4971-ae9c-48a520e6e43d"
+    },
+    {
+      "id": "47de6c20-df11-45ef-b523-c4abcf5f270f",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:5000/banner",
+      "params": [],
+      "headers": [
+        {
+          "id": "e7f9efb9-ffbb-42ad-8b1e-970c18061f65",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"message\": \"Hello Jokers\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "71852d99-b37d-4971-ae9c-48a520e6e43d"
+    }
+  ],
+  "folders": [],
+  "environments": {},
+  "createdAt": "2026-07-18T21:42:11.003Z",
+  "updatedAt": "2026-07-18T21:43:59.123Z"
+}
