@@ -1,0 +1,102 @@
+{
+  "id": "d4943dcb-e29f-4464-9257-d8d3549986fe",
+  "name": "Otp",
+  "requests": [
+    {
+      "id": "d5d93115-3281-4e7e-affb-344a6ed65a59",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:5000/otp",
+      "params": [],
+      "headers": [
+        {
+          "id": "d543192a-1a27-43d2-af07-4feb520e858b",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"phone\": \"12345\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "d4943dcb-e29f-4464-9257-d8d3549986fe"
+    },
+    {
+      "id": "372592ec-79a1-473f-bd4c-ac58f6e75af3",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:5000/otp/verify",
+      "params": [],
+      "headers": [
+        {
+          "id": "67e6886f-9920-4f2a-8dfd-1227a47a4db7",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"phone\": \"12345\",\n  \"otp\": \"154839\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "d4943dcb-e29f-4464-9257-d8d3549986fe"
+    },
+    {
+      "id": "ad4eddaa-e4a6-4394-acf5-967737b85016",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:5000/otp",
+      "params": [],
+      "headers": [
+        {
+          "id": "d98eadca-dd0a-4a90-bfa9-97a4f161d0c5",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"phone\": \"12345\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "d4943dcb-e29f-4464-9257-d8d3549986fe"
+    },
+    {
+      "id": "d5d93115-3281-4e7e-affb-344a6ed65a59",
+      "name": "New Request",
+      "method": "GET",
+      "url": "http://localhost:5000/otp/12345/ttl",
+      "params": [],
+      "headers": [
+        {
+          "id": "d543192a-1a27-43d2-af07-4feb520e858b",
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": ""
+      },
+      "auth": {
+        "type": "none"
+      },
+      "collectionId": "d4943dcb-e29f-4464-9257-d8d3549986fe"
+    }
+  ],
+  "folders": [],
+  "environments": {},
+  "createdAt": "2026-07-19T18:51:19.915Z",
+  "updatedAt": "2026-07-19T19:01:52.315Z"
+}

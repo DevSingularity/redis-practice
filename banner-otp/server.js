@@ -28,6 +28,40 @@ app.get("/banner/exists", async (req, res) => {
     res.json({ exists: exists === 1, success: true });
 });
 
+function otpKey(phone) {
+    return `otp:${phone}`;
+}
+
+app.post("/otp", async (req, res) => {
+    const { phone } = req.body;
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
+    await redis.set(otpKey(phone), otp, "EX", 30); // Store OTP in Redis with a 30-second expiration
+    res.json({ message: "OTP generated successfully", otp, success: true }); // sim of sending OTP to the user
+});
+
+app.post("/otp/verify", async (req, res) => {
+    const {phone, otp} = req.body;
+    const storedOtp = await redis.get(otpKey(phone));
+
+    if (!storedOtp) {
+        return res.status(400).json({ message: "OTP has expired or does not exist", success: false });
+    }
+    
+    if (storedOtp !== otp) {
+        return res.status(400).json({ message: "Invalid OTP", success: false });
+    }
+
+    await redis.del(otpKey(phone)); // Delete OTP after successful verification
+    res.json({ message: "OTP verified successfully", success: true });
+});
+
+app.get("/otp/:phone/ttl", async (req, res) => {
+    const { phone } = req.params;
+    const ttl = await redis.ttl(otpKey(phone));
+    res.json({ ttl, success: true });
+});
+
 app.listen(5000, () => {
     console.log("Banner service is running on port 5000");
 });
