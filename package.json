@@ -6,7 +6,8 @@
   "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev:banner": "nodemon banner-otp/server.js",
+    "dev:otp": "nodemon banner-otp/server.js"
   },
   "keywords": [],
   "author": "",
