@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:banner": "nodemon banner-otp/server.js",
-    "dev:otp": "nodemon banner-otp/server.js"
+    "dev:otp": "nodemon banner-otp/server.js",
+    "dev:user-profile": "nodemon user-profile/server.js",
+    "dev:emailq": "nodemon emailq/server.js"
   },
   "keywords": [],
   "author": "",
